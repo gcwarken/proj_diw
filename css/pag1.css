@@ -1,0 +1,41 @@
+h1 {
+	font-size: 50px;
+	font-family: "Century Gothic", Arial, sans-serif;
+}
+
+h2 {
+	font-size: 25px;
+	font-family: "Century Gothic", Arial, sans-serif;
+}
+
+
+p {
+	font-size: 16px;
+	font-family: "Century Gothic", Arial, sans-serif;
+	font-style: italic; /* oblique, normal */
+	font-weight: 300; /* light, lighter, bold, bolder */
+	font-variant: small-caps;
+}
+
+#ultimo-p {
+	font-family: Verdana, Arial, serif;
+	color: blue;
+	text-align: justify;
+}
+
+/* seletor de id */
+#vermelho {
+	color: red;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+/* seletor de classe */
+.especial {
+	text-decoration: underline dashed green; /* line-through, overline, none / dotted, solid, dashed */
+	text-transform: capitalize; /* uppercase, lowercase */
+}
+
+.cor-fundo {
+	background-color: gold;
+}
