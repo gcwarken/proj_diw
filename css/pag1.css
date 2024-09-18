@@ -1,13 +1,17 @@
 h1 {
 	font-size: 50px;
 	font-family: "Century Gothic", Arial, sans-serif;
+	border-top: 3px  dashed #CCC /* grossura estilo cor */;
+	/* none, dashed, dotted, solid, double, goove, inset, outset */
+	border-left: 2px dotted darkorange;
+	border-right: 8px solid darkblue;
+	border-bottom: 5px dotted darkred;
 }
 
 h2 {
 	font-size: 25px;
 	font-family: "Century Gothic", Arial, sans-serif;
 }
-
 
 p {
 	font-size: 16px;
@@ -38,4 +42,14 @@ p {
 
 .cor-fundo {
 	background-color: gold;
+}
+
+img {
+	width: 350px;
+	border: 8px groove purple; /* inset, outset, double, groove */
+}
+
+#festa {
+	height: 233px;
+	width: auto;
 }
