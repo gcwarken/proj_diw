@@ -1,94 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="utf-8">
-	<title>Formulários</title>
+  <meta charset="utf-8">
+  <title>Formulários</title>
+  <link rel="stylesheet" type="text/css" href="css/formulario.css">
 </head>
 <body>
-	<!-- Define a área de um formulário -->
-	<form name="form-basico" action="cadastrar.html" method="GET">
-		<fieldset>
-			<legend>Dados de Login</legend>
-			<label for="id-nome">Nome completo:</label>
-			<input id="id-nome" type="text" name="nome">
-			<br><br>
-			<label for="id-senha">Senha:</label>
-			<input id="id-senha" type="password" name="senha">
-		</fieldset>
+  <!-- Define a área de um formulário -->
+  <form class="esquerda" name="form-basico" action="cadastrar.html" method="GET">
+    <fieldset>
+      <legend>Dados de Login</legend>
+      <label for="id-nome">Nome completo:</label>
+      <input id="id-nome" type="text" name="nome">
+      
+      <label for="id-senha">Senha:</label>
+      <input id="id-senha" type="password" name="senha" autofocus>
+    </fieldset>
 
-		<fieldset>
-			<legend>Dados do pedido</legend>
-			
-			<span>Selecione o sabor da borda:</span>
+    <fieldset>
+      <legend>Dados do pedido</legend>
+      
+      <span>Selecione o sabor da borda:</span>
 
-			<input id="id-sem-borda" type="radio" name="borda" value="sem-borda" checked>
-			<label for="id-sem-borda">Sem Borda</label>
+      <input id="id-sem-borda" class="especial" type="radio" name="borda" value="sem-borda" checked>
+      <label for="id-sem-borda">Sem Borda</label>
 
-			<input id="id-borda-catupiry" type="radio" name="borda" value="catupiry">
-			<label for="id-borda-catupiry">Catupiry</label>
+      <input id="id-borda-catupiry" class="especial" type="radio" name="borda" value="catupiry">
+      <label for="id-borda-catupiry">Catupiry</label>
 
-			<input id="id-borda-brigadeiro" type="radio" name="borda" value="brigadeiro">
-			<label for="id-borda-brigadeiro">Brigadeiro</label>
+      <input id="id-borda-brigadeiro" class="especial" type="radio" name="borda" value="brigadeiro">
+      <label for="id-borda-brigadeiro">Brigadeiro</label>
 
-			<br><br>
+      
+      <span>Selecione os sabores da pizza:</span>
 
-			<span>Selecione os sabores da pizza:</span>
+      <input id="id-sabor-brocolis" class="especial" type="checkbox" name="brocolis" value="selecionado">
+      <label for="id-sabor-brocolis">Brócolis</label>
 
-			<input id="id-sabor-brocolis" type="checkbox" name="brocolis" value="selecionado">
-			<label for="id-sabor-brocolis">Brócolis</label>
+      <input id="id-sabor-margherita" class="especial" type="checkbox" name="margherita" value="selecionado">
+      <label for="id-sabor-margherita">Margherita</label>
 
-			<input id="id-sabor-margherita" type="checkbox" name="margherita" value="selecionado">
-			<label for="id-sabor-margherita">Margherita</label>
+      <input id="id-sabor-rucula" class="especial" type="checkbox" name="rucula" value="selecionado">
+      <label for="id-sabor-rucula">Rúcula</label>
 
-			<input id="id-sabor-rucula" type="checkbox" name="rucula" value="selecionado">
-			<label for="id-sabor-rucula">Rúcula</label>
+      <input id="id-sabor-abobrinha" class="especial" type="checkbox" name="abobrinha" value="selecionado">
+      <label for="id-sabor-abobrinha">Abobrinha</label>
 
-			<input id="id-sabor-abobrinha" type="checkbox" name="abobrinha" value="selecionado">
-			<label for="id-sabor-abobrinha">Abobrinha</label>
+      
+      <span>Selecione o tamanho da pizza:</span>
 
-			<br><br>
+      <select name="tamanho">
+        <option selected disabled>Tamanhos</option>
+        <option value="p">Brotinho 25cm</option>
+        <option value="m">Média 35cm</option>
+        <option value="g">Família 45cm</option>
+      </select>
+      
 
-			<span>Selecione o tamanho da pizza:</span>
+      <span>Selecione sua bebida:</span>
 
-			<select name="tamanho">
-				<option selected disabled>Tamanhos</option>
-				<option value="p">Brotinho 25cm</option>
-				<option value="m">Média 35cm</option>
-				<option value="g">Família 45cm</option>
-			</select>
+      <select name="bebida">
+        <option selected disabled>Bebidas</option>
+        <optgroup label="Sucos">
+          <option value="laranja">Suco de laranja</option>
+          <option value="limao">Suco de limão</option>
+          <option value="tamarindo">Suco de tamarindo</option>
+        </optgroup>
+        <optgroup label="Águas">
+          <option value="sem-gas">Sem gás</option>
+          <option value="com-gas">Com gás</option>
+        </optgroup>
+      </select>
 
-			<br><br>
+      
+      <span>Observações</span>
+      <textarea name="obs" cols="50" rows="4" minlength="5" maxlength="300"></textarea>
+    </fieldset>
 
-			<span>Selecione sua bebida:</span>
 
-			<select name="bebida">
-				<option selected disabled>Bebidas</option>
-				<optgroup label="Sucos">
-					<option value="laranja">Suco de laranja</option>
-					<option value="limao">Suco de limão</option>
-					<option value="tamarindo">Suco de tamarindo</option>
-				</optgroup>
-				<optgroup label="Águas">
-					<option value="sem-gas">Sem gás</option>
-					<option value="com-gas">Com gás</option>
-				</optgroup>
-			</select>
+    <input type="submit" name="btn" value="Realizar pedido">
+    <input type="reset" name="btn-apaga" value="Apagar dados">
+    <input type="button" name="btn-generico" value="Botão genérico">
+    <input type="file" name="btn-arquivo">
+    <input type="hidden" name="segredo" value="oculto">
+    <input type="image" name="btn-img" src="img/botao.png" style="width: 250px">
+    
+  </form>
 
-			<br><br>
 
-			<span>Observações<br></span>
-			<textarea name="obs" cols="50" rows="4" minlength="5" maxlength="300"></textarea>
-		</fieldset>
+  <form class="direita" name="form-avancado" action="registrar-html" method="GET">
+    <fieldset>
+      <legend>Formulário avançado</legend>
 
-		<br>
+        <label for="email">Informe seu e-mail:</label>
+        <input id="email" type="email" name="email" placeholder="usuario@email.com">
 
-		<input type="submit" name="btn" value="Realizar pedido">
-		<input type="reset" name="btn-apaga" value="Apagar dados">
-		<input type="button" name="btn-generico" value="Botão genérico">
-		<input type="file" name="btn-arquivo">
-		<input type="hidden" name="segredo" value="oculto">
-		<input type="image" name="btn-img" src="img/botao.png" style="width: 250px">
+        
+        <label for="site">Informe seu LinkedIn:</label>
+        <input id="site" type="url" name="site" placeholder="Deve ser http:// ou https://">
 
-	</form>
+        
+        <label for="idade">Informe sua idade:</label>
+        <input id="idade" type="number" name="idade" min="18" max="100" value="18">
+
+        
+        <label for="atendimento">Avalie o Atendimento:</label>
+        <input id="atendimento" type="range" name="atendimento" min="0" max="100" step="10" value="90">
+
+        
+        <label for="cor">Selecione sua cor favorita:</label>
+        <input id="cor" type="color" name="cor" value="#422a89">
+
+        
+        <label for="telefone">Número de contato</label>
+        <input id="telefone" type="tel" name="telefone" placeholder="+55 (51) 00000-0000">
+
+        
+        <label for="data-nasc">Data de nascimento:</label>
+        <input id="data-nasc" type="date" name="data-nasc" min="1924-01-01" max="2024-10-02">
+
+        
+        <label for="horario">Selecione seu horário:</label>
+        <input id="horario" type="time" name="horario">
+
+
+        <label for="seriados">Selecione um seriado:</label>
+        <input list="catalogo" name="seriados">
+        <datalist id="catalogo">
+          <option value="Irmão do Jorel">
+          <option value="Rick & Morty">
+          <option value="Doctor Who">
+          <option value="Chaves">
+          <option value="The IT Crowd">
+        </datalist>
+
+        
+        <input type="submit" name="btn-enviar">
+      </fieldset>
+    </form>
+
 </body>
 </html>
