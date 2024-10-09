@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Formulário Profssional</title>
+</head>
+<body>
+  <form name="form-profissional" action="recebedados.php" method="POST">
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+
+      <label for="id-nome">Nome completo:</label>
+      <input id="id-nome" type="text" name="nome" placeholder="Campo obrigatório" autofocus required>
+      
+      <br> <!-- br para quebra de linha é errado mas já que não tem CSS vamos colocar -->
+
+      <span>Gênero:</span>
+      <input id="id-gen-fem" type="radio" name="gen-fem" value="gen-f" >
+      <label for="id-gen-fem">Feminino</label>
+  
+      <input id="id-gen-masc" type="radio" name="gen-masc" value="gen-m" >
+      <label for="id-gen-masc">Masculino</label>
+  
+      <input id="id-gen-outro" type="radio" name="gen-outro" value="gen-o" >
+      <label for="id-gen-outro">Outro</label>
+ 
+      <input id="id-gen-n" type="radio" name="gen-n" value="gen-n" checked>
+      <label for="id-gen-n">Prefiro não responder</label>
+
+      <br>
+
+      <label for="id-data-nasc">Data de nascimento:</label>
+      <input id="id-data-nasc" type="date" name="data-nasc" min="1924-01-01" max="2015-12-31">
+
+      <br>
+
+      <label for="id-email">E-mail:</label>
+      <input id="id-email" type="email" name="email" placeholder="usuario@email.com" required>
+
+      <br>
+
+      <label for="id-site-pessoal">URL Site pessoal:</label>
+      <input id="id-site-pessoal" type="url" name="site-pessoal" placeholder="Deve ser http:// ou https://">
+
+      <br>
+
+      <label for="id-endereco">Endereço (Rua, número e complemento):</label>
+      <input id="id-endereco" type="text" name="endereco" placeholder="Campo obrigatório" required>
+
+      <br>
+
+      <span>Cidade:</span>
+
+      <select id="id-cidades" name="cidades">
+        <option selected disabled>Selecione</option>
+        <option value="alvorada">Alvorada</option>
+        <option value="canoas">Canoas</option>
+        <option value="esteio">Esteio</option>
+        <option value="gravatai">Gravataí</option>
+        <option value="novo-hamburgo">Novo Hamburgo</option>
+        <option value="passo-fundo">Passo Fundo</option>
+        <option value="pelotas">Pelotas</option>
+        <option value="porto-alegre">Porto Alegre</option>
+        <option value="sao-leopoldo">São Leopoldo</option>
+      </select>
+
+      <br>
+
+      <label for="id-telefone">Telefone:</label>
+      <input id="id-telefone" type="tel" name="telefone" placeholder="+55 (51) 00000-0000">
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Dados profissionais</legend>
+
+      <span>Área de atuação:</span>
+
+      <input id="id-atua-design" type="checkbox" name="design" value="selecionado">
+      <label for="id-atua-design">Design</label>
+
+      <input id="id-atua-front" type="checkbox" name="front-end" value="selecionado">
+      <label for="id-atua-front">Desenvolvimento front end</label>
+
+      <input id="id-atua-back" type="checkbox" name="back-end" value="selecionado">
+      <label for="id-atua-back">Desenvolvimento back end</label>
+
+      <input id="id-atua-eng-software" type="checkbox" name="eng-software" value="selecionado">
+      <label for="id-atua-eng-software">Engenharia de software</label>
+
+      <input id="id-atua-bd" type="checkbox" name="bd" value="selecionado">
+      <label for="id-atua-bd">Banco de dados</label>
+
+      <input id="id-atua-testes" type="checkbox" name="testes" value="selecionado">
+      <label for="id-atua-testes">Análise de testes</label>
+      
+      <input id="id-atua-negocios" type="checkbox" name="negocios" value="selecionado">
+      <label for="id-atua-negocios">Análise de negócios</label>
+
+      <input id="id-atua-manutencao" type="checkbox" name="manutencao" value="selecionado">
+      <label for="id-atua-manutencao">Manutenção</label>
+
+      <br>
+
+      <label for="id-formacao">Formação:</label>
+      <input id="id-formacao" list="lista-formacao" name="formacao">
+      <datalist id="lista-formacao">
+        <option value="Ensino fundamental">
+        <option value="Ensino médio">
+        <option value="Ensino superior">
+        <option value="Especialização">
+        <option value="Mestrado">
+        <option value="Doutorado">
+      </datalist>
+
+      <br>
+
+      <span>Breve histórico profissional:</span>
+      <textarea name="hist-prof" cols="50" rows="4" minlength="5" maxlength="600"></textarea>
+
+      <br>
+
+      <label for="id-cv">Upload do currículo vitae:</label>
+      <input id="id-cv" type="file" name="cv">
+
+      <br>
+
+      <label for="id-disponibilidade">Disponibilidade de horas semanais:</label>
+      <input id="id-disponibilidade" type="number" name="disponibilidade" min="10" max="40" value="10" step="10">
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Agendamento de entrevista</legend>
+
+      <label for="id-data-entrevista">Data:</label>
+      <input id="id-data-entrevista" type="date" name="data-entrevista" min="2024-10-09" required>
+
+      <br>
+
+      <label for="id-data-entrevista">Horario:</label>
+      <input id="id-hora-entrevista" type="time" name="data-entrevista" required>
+
+    </fieldset>
+
+    <input type="submit" name="btn" value="Enviar dados">
+
+  </form>
+
+</body>
+</html>
