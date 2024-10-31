@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    font-family: "Century Gothic", Arial, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    background-color: lavender;
+    min-width: 600px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho *********************************************/
+
+header {
+    background-color: #422a89;
+    height: 115px;
+    text-align: center;
+    list-style-position: inside;
+}
+
+header h1 {
+    color: #fff;
+    padding: 10px 0;
+}
+
+header nav {
+    background-color: #bfb5de;
+    height: 60px;
+}
+
+header nav ul li {
+    list-style-type: none;
+    display: inline-block;
+
+}
+
+header nav ul li a:link,
+header nav ul li a:visited {
+    color: black;
+    text-decoration: none;
+    background-color: #81E4DA;
+    padding: 8px 10px;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color .25s;
+}
+
+header nav ul li a:active,
+header nav ul li a:hover {
+    background-color: #04958b;
+}
+
+/* Destaque **********************************************/
+
+.destaque {
+    background-color: #81E4DA;
+    height: 250px;
+}
+
+.destaque figure {
+    width: 35%;
+    height: 200px;
+    background-color: #04958b;
+    margin-top: 25px;
+    margin-left: 20px; 
+    float: left;
+}
+
+.destaque p {
+    background-color: #04958b;
+    margin-top: 25px;
+    margin-right: 20px;
+    width: 58%;
+    float: right;
+    line-height: 25px;
+}
+
+.destaque figure img {
+    height: 100%;
+}
